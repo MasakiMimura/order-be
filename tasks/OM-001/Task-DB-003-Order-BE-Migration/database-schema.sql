@@ -75,7 +75,14 @@ CREATE TABLE "order" (
     created_at TIMESTAMPTZ DEFAULT NOW(),
     member_card_no VARCHAR(20), -- nullable
     total NUMERIC(10,2) NOT NULL,
-    status VARCHAR(16) NOT NULL CHECK (status IN ('IN_ORDER', 'CONFIRMED', 'PAID'))
+    status VARCHAR(16) NOT NULL CHECK (status IN ('IN_ORDER', 'CONFIRMED', 'PAID')),
+    confirmed BOOLEAN DEFAULT FALSE,
+    confirmed_at TIMESTAMPTZ,
+    payment_method VARCHAR(20),
+    points_used NUMERIC(10,2),
+    member_new_balance NUMERIC(10,2),
+    paid_at TIMESTAMPTZ,
+    paid BOOLEAN DEFAULT FALSE
 );
 
 -- 注文明細テーブル
