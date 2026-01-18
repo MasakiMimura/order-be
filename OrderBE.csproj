@@ -35,8 +35,7 @@
     <Compile Include="Test\Unit\OrderManagement\OrderRepositoryTests.cs" />
     <Compile Include="Test\Unit\OrderManagement\OrderServiceTests.cs" />
     <Compile Include="Test\Unit\OrderManagement\OrderControllerTests.cs" />
-    <!-- ProductRepositoryTests.cs は ProductRepository 実装後に有効化 -->
-    <!-- <Compile Include="Test\Unit\Product\ProductRepositoryTests.cs" /> -->
+    <Compile Include="Test\Unit\Product\ProductRepositoryTests.cs" />
     <Compile Include="Test\Unit\Product\ProductServiceTests.cs" />
     <Compile Include="Test\Unit\Product\CustomWebApplicationFactory.cs" />
     <Compile Include="Test\Unit\Product\ProductControllerTests.cs" />

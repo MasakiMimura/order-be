@@ -44,8 +44,8 @@ namespace OrderBE.Models
         public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
 
         /// <summary>
-        /// このカテゴリに属する商品のコレクション
+        /// このカテゴリに属する商品のコレクション（1対多）
         /// </summary>
-        public List<Product> Products { get; set; } = new List<Product>();
+        public ICollection<Product> Products { get; set; } = new List<Product>();
     }
 }
