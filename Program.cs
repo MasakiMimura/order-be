@@ -42,9 +42,9 @@ builder.Services.AddCors(options =>
 builder.Services.AddDbContext<OrderDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-// ProductDbContext登録（商品管理用）
+// ProductDbContext登録（商品管理用 - productデータベースに接続）
 builder.Services.AddDbContext<ProductDbContext>(options =>
-    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
+    options.UseNpgsql(builder.Configuration.GetConnectionString("ProductConnection")));
 
 // Register Repository and Service layers
 builder.Services.AddScoped<IOrderRepository, OrderRepository>();
